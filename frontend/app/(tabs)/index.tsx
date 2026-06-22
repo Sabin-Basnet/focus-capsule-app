@@ -7,7 +7,7 @@ export default function HomeScreen() {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
+    let interval: ReturnType<typeof setInterval> | null = null;
 
     if (isActive && secondsLeft > 0) {
       interval = setInterval(() => {
